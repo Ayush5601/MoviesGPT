@@ -1,7 +1,11 @@
-# Netflix GPT
+# Movies/Netflix GPT
+
+Test User Credentials:
+username - test@netflix.com
+password - Test@123
 
 - Create React App
-- Configured TailwindCSS 
+- Configured TailwindCSS
 - Header
 - Routing of App
 - Login Form
@@ -13,7 +17,7 @@
 - Create SignUp User Account
 - Implement Sign In user Api
 - Created Redux Store with userSlice
-- Implemented Sign out 
+- Implemented Sign out
 - Update Profile
 - BugFix: Sign up user displayName and profile picture update
 - BugFix: if the user is not logged in Redirect /browse to Login Page and vice-versa
@@ -38,7 +42,7 @@
 - GPT Search Page
 - GPT Search Bar
 - (BONUS) Multi-language Feature in our App
-- Get Open AI Api Key 
+- Get Open AI Api Key
 - Gpt Search API Call
 - fetched gptMoviesSuggestions from TMDB (used Promise.all to handle async call for all related movies)
 - created gptSlice added data
@@ -49,21 +53,21 @@
 - Made our Site Responsive
 
 # Features
+
 - Login/Sign Up
-    - Sign In /Sign up Form
-    - redirect to Browse Page
+  - Sign In /Sign up Form
+  - redirect to Browse Page
 - Browse (after authentication)
-    - Header
-    - Main Movie
-        - Tailer in Background
-        - Title & Description
-        - MovieSuggestions
-            - MovieLists * N 
+  - Header
+  - Main Movie
+    - Tailer in Background
+    - Title & Description
+    - MovieSuggestions
+      - MovieLists \* N
 - NetflixGPT
-    - Search Bar
-    - Movie Suggestions
-
-
+  - Search Bar
+  - Movie Suggestions
 
 # Project Setup
+
 - Before starting the project please add .env file and add TMDB and OPENAI KEY into it.

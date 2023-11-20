@@ -86,8 +86,8 @@ const GptSearchBar = () => {
           {lang[langKey].search}
         </button>
         {isUnderDevelopment && (
-          <h1 className="text-white col-span-9">
-            The feature is still under development{" "}
+          <h1 className="text-white col-span-9 text-center text-3xl">
+            The limit for the access tokens has been exhausted{" "}
           </h1>
         )}
       </form>
