@@ -4,6 +4,8 @@ Test User Credentials:
 username - test@netflix.com
 password - Test@123
 
+Project Link - https://entertainmentgpt.netlify.app/
+
 - Create React App
 - Configured TailwindCSS
 - Header
