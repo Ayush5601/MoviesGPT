@@ -7,6 +7,7 @@ import usePopularMovies from "../hooks/usePopularMovies";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import useMoviesByGenre from "../hooks/useMoviesByGenre";
 import useTvShows from "../hooks/useTvShows";
+import useTopRatedMovies from "../hooks/useTopRatedMovies";
 
 const Browse = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
@@ -14,6 +15,7 @@ const Browse = () => {
   useNowPlayingMovies();
   usePopularMovies();
   useMoviesByGenre();
+  useTopRatedMovies();
   useTvShows();
 
   return (
