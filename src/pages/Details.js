@@ -22,46 +22,51 @@ const Details = () => {
 
   if (!movieDetails) return null;
 
+  const {
+    backdrop_path,
+    tagline,
+    poster_path,
+    genres,
+    title,
+    overview,
+    release_date,
+    runtime,
+    vote_average,
+  } = movieDetails;
+
   return (
-    <div className="w-screen h-screen text-white bg-gradient-to-bl from-black">
+    <div className="w-screen md:h-screen text-white bg-gradient-to-bl from-black">
       <img
         className="fixed -z-10 object-cover w-screen h-screen"
-        src={BACKDROP_CDN_URL + movieDetails.backdrop_path}
+        src={BACKDROP_CDN_URL + backdrop_path}
         alt="backdrop"
       />
-      <div className="flex items-center justify-center">
-        <div className="text-2xl md:text-5xl pb-4 -ml-5 font-semibold mr-2 mt-14">
-          {movieDetails.title} - {movieDetails.tagline}
+      <div className="flex items-center justify-center ml-4 mr-4">
+        <div className="mx-auto text-2xl md:text-5xl pb-4 font-semibold mt-14">
+          {title} - {tagline}
         </div>
-        {/* <div className="md:text-xl italic ml-2 align-middle">
-          
-        </div> */}
       </div>
-      <div className="flex flex-col md:grid grid-flow-col">
-        <div className="md:col-span-4 mt-16 ml-28">
+      <div className="flex flex-col md:grid grid-flow-col pb-6">
+        <div className="mx-auto md:col-span-4 mt-16 md:ml-28">
           <img
             className="max-h-96 col-span-4"
             alt="Movie Card"
-            src={IMG_CDN_URL + movieDetails.poster_path}
+            src={IMG_CDN_URL + poster_path}
           />
         </div>
-        <div className="col-span-8 mt-14 mr-20 ml-6">
+        <div className="mr-16 md:col-span-8 mt-14 md:mr-24 ml-8">
           <div className="flex pb-8">
-            {movieDetails.genres?.map((genre) => (
-              <div key={genre.id} className="text-xl">
+            {genres?.map((genre) => (
+              <div key={genre.id} className="text-base">
                 {genre.name + "/"}
               </div>
             ))}
           </div>
-          <div className="pb-5 mb-10 text-lg">{movieDetails.overview}</div>
+          <div className="pb-5 mb-10 text-lg text-justify">{overview}</div>
+          <div className="text-xl italic">Release: {release_date}</div>
+          <div className="text-xl italic">Runtime {runtime} mins</div>
           <div className="text-xl italic">
-            Release: {movieDetails.release_date}
-          </div>
-          <div className="text-xl italic">
-            Runtime {movieDetails.runtime} mins
-          </div>
-          <div className="text-xl italic">
-            Rating: {movieDetails.vote_average} ⭐
+            Rating: {vote_average.toFixed(1)} ⭐
           </div>
         </div>
       </div>
