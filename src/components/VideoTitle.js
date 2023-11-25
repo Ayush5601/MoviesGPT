@@ -7,7 +7,7 @@ const VideoTitle = ({ title, overview, id }) => {
     navigate(path);
   };
   return (
-    <div className="w-[100%] aspect-video pt-[20%] px-6 md:px-24 absolute text-white bg-gradient-to-r from-black">
+    <div className="w-[100%] aspect-video pt-[20%] px-6 absolute text-white bg-gradient-to-r from-black">
       <h1 className="text-2xl md:text-6xl font-bold">{title}</h1>
       <p className="hidden md:inline-block py-6 text-lg w-1/2">
         {overview.substring(0, 150) + "..."}
