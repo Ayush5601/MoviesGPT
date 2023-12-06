@@ -46,7 +46,7 @@ const Details = () => {
           {title} - {tagline}
         </div>
       </div>
-      <div className="flex flex-col md:grid grid-flow-col pb-6">
+      <div className="flex flex-col md:grid grid-flow-col pb-6 items-center justify-center">
         <div className="mx-auto md:col-span-4 mt-16 md:ml-28">
           <img
             className="max-h-96 col-span-4"
